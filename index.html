@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tectri Finance</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <div class="logo-section">
+      <img src="assets/logo.png" alt="Logo">
+      <h1>Tectri Finance</h1>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Loans</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h2>Smart Financial Solutions For Everyone</h2>
+
+      <p>
+        Fast approvals, transparent processes,
+        and reliable support for personal and business growth.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="https://forms.gle/dD3WXUdpj5P9YEtR9"
+           target="_blank"
+           class="primary-btn">
+           Apply Now
+        </a>
+
+        <a href="#about" class="secondary-btn">
+          Learn More
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>Why Choose Tectri Finance?</h2>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <h3>Fast Processing</h3>
+        <p>Quick loan review and approval process.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Trusted Service</h3>
+        <p>Transparent and secure financial solutions.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Flexible Payments</h3>
+        <p>Convenient repayment structures for clients.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="section-title">
+      <h2>Our Loan Products</h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Personal Loans</h3>
+        <p>Emergency and lifestyle financial support.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Business Loans</h3>
+        <p>Expand and stabilize your business operations.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Salary Advance</h3>
+        <p>Quick short-term salary assistance solutions.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LOAN CALCULATOR -->
+  <section class="calculator" id="calculator">
+
+    <div class="section-title">
+      <h2>Loan Calculator</h2>
+    </div>
+
+    <div class="calculator-box">
+
+      <input
+        type="number"
+        id="amount"
+        placeholder="Enter Loan Amount"
+      >
+
+      <select id="weeks">
+
+        <option value="">Select Loan Duration</option>
+
+        <option value="1">1 Week</option>
+
+        <option value="2">2 Weeks</option>
+
+        <option value="3">3 Weeks</option>
+
+        <option value="4">4 Weeks</option>
+
+      </select>
+
+      <button onclick="calculateLoan()">
+        Calculate Loan
+      </button>
+
+      <h3 id="result"></h3>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-box">
+
+      <p>Email: info@tectrifinance.com | tectrifinance@gmail.com</p>
+
+      <p>Phone: +260 977 717 636</p>
+
+      <p>Lusaka, Zambia</p>
+
+    </div>
+
+  </section>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/260977717636"
+     class="whatsapp"
+     target="_blank">
+     💬
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Tectri Finance. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
