@@ -6,29 +6,32 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f6f8fc;
-  color: #222;
+
+  /* CLEAN FINTECH BACKGROUND */
+  background: #f3f6fb;
+
+  color: #1f2937;
   line-height: 1.6;
 }
 
-/* NAVBAR */
-.navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  /* NEW BRAND COLOR: #F75C03 */
-  background:linear-gradient(90deg, #F75C03, #ff7a1a);
+  /* BRAND ORANGE */
+  background: linear-gradient(90deg, #F75C03, #ff7a1a);
 
-  border-bottom:1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  box-shadow:0 4px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
 
-  z-index:1000;
+  z-index: 1000;
 }
 
 .logo-section {
@@ -40,11 +43,13 @@ body {
 .logo-section img {
   width: 45px;
   height: 45px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
 }
 
 .navbar h1 {
   font-size: 20px;
   font-weight: 600;
+  color: #fff;
 }
 
 .navbar nav a {
@@ -56,10 +61,13 @@ body {
 }
 
 .navbar nav a:hover {
-  color: #00c2ff;
+  color: #000;
+  background: rgba(255,255,255,0.25);
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
-/* HERO */
+/* ===================== HERO ===================== */
 .hero {
   height: 90vh;
   background: url('assets/hero.jpg') center/cover no-repeat;
@@ -103,9 +111,14 @@ body {
   font-weight: 500;
 }
 
+/* BUTTONS */
 .primary-btn {
-  background: #00c2ff;
+  background: #F75C03;
   color: #fff;
+}
+
+.primary-btn:hover {
+  background: #ff7a1a;
 }
 
 .secondary-btn {
@@ -113,9 +126,9 @@ body {
   color: #fff;
 }
 
-/* SECTIONS */
+/* ===================== SECTIONS ===================== */
 section {
-  padding: 70px 60px;
+  padding: 80px 60px;
 }
 
 .section-title {
@@ -128,44 +141,43 @@ section {
   color: #0b1f3a;
 }
 
-/* ABOUT */
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.about-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-/* SERVICES */
+/* ===================== CARDS ===================== */
+.about-grid,
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+.about-card,
 .service-card {
   background: #fff;
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+
   text-align: center;
+
+  transition: 0.3s;
+
+  border: 1px solid rgba(0,0,0,0.04);
 }
 
-/* CALCULATOR */
+.about-card:hover,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* ===================== CALCULATOR ===================== */
 .calculator-box {
   max-width: 500px;
   margin: auto;
   background: #fff;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .calculator-box input,
@@ -183,7 +195,7 @@ section {
 
 .calculator-box input:focus,
 .calculator-box select:focus {
-  border-color: #00c2ff;
+  border-color: #F75C03;
 }
 
 .calculator-box button {
@@ -199,7 +211,7 @@ section {
 }
 
 .calculator-box button:hover {
-  background: #00c2ff;
+  background: #F75C03;
 }
 
 #result {
@@ -210,16 +222,16 @@ section {
   font-weight: 500;
 }
 
-/* CONTACT */
+/* ===================== CONTACT ===================== */
 .contact-box {
   text-align: center;
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-/* WHATSAPP BUTTON */
+/* ===================== WHATSAPP ===================== */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -237,16 +249,18 @@ section {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* FOOTER */
+/* ===================== FOOTER ===================== */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #0b1f3a;
+  padding: 22px;
+  background: linear-gradient(90deg, #F75C03, #ff7a1a);
   color: #fff;
   margin-top: 40px;
+  font-weight: 500;
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE */
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
 
   .navbar {
