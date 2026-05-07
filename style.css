@@ -21,14 +21,12 @@ body {
   justify-content:space-between;
   align-items:center;
 
-  /* PURE GOLD ACCENT STYLE */
-  background:linear-gradient(90deg, #d4af37, #f5c542);
+  /* NEW BRAND COLOR: #F75C03 */
+  background:linear-gradient(90deg, #F75C03, #ff7a1a);
 
-  /* subtle luxury border */
-  border-bottom:1px solid rgba(0,0,0,0.15);
+  border-bottom:1px solid rgba(255, 255, 255, 0.2);
 
-  /* soft premium shadow */
-  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+  box-shadow:0 4px 20px rgba(0,0,0,0.35);
 
   z-index:1000;
 }
