@@ -21,12 +21,14 @@ body {
   justify-content:space-between;
   align-items:center;
 
-  /* NEW DEEP BLUE + FINANCE LOOK */
-  background:linear-gradient(90deg, #06142e, #0b1f3a);
+  /* LIGHT PREMIUM BACKGROUND */
+  background:linear-gradient(90deg, #fff8e1, #fff3c4);
 
-  border-bottom:1px solid rgba(255, 215, 0, 0.2);
+  /* GOLD BORDER ACCENT */
+  border-bottom:2px solid #d4af37;
 
-  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  /* SOFT PREMIUM SHADOW */
+  box-shadow:0 4px 18px rgba(212, 175, 55, 0.25);
 
   z-index:1000;
 }
