@@ -2,13 +2,34 @@ function calculateLoan() {
 
     const amount = parseFloat(document.getElementById("amount").value);
 
-    const weeks = parseInt(document.getElementById("weeks").value);
+    const months = parseInt(document.getElementById("months").value);
 
-    // Charges
-    const weeklyInterestRate = 10;
-    const serviceChargeRate = 2;
+    const category = document.getElementById("category").value;
 
-    if (!amount || !weeks) {
+    // Processing fee
+    const processingFeeRate = 5;
+
+    let interestRate;
+
+    // Interest based on customer type
+    if (category === "civil") {
+
+        interestRate = 10;
+
+    } else if (category === "noncivil") {
+
+        interestRate = 15;
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Please select loan category";
+
+        return;
+    }
+
+    // Validation
+    if (!amount || !months) {
 
         document.getElementById("result").innerHTML =
             "Please fill all fields";
@@ -16,31 +37,41 @@ function calculateLoan() {
         return;
     }
 
-    // Weekly interest
+    // Interest calculation
     const interest =
-        amount * (weeklyInterestRate / 100) * weeks;
+        amount * (interestRate / 100) * months;
 
-    // One-time service charge
-    const serviceCharge =
-        amount * (serviceChargeRate / 100);
+    // One-time processing fee
+    const processingFee =
+        amount * (processingFeeRate / 100);
 
     // Total repayment
     const total =
-        amount + interest + serviceCharge;
+        amount + interest + processingFee;
 
-    // Weekly installment
-    const weeklyPayment =
-        total / weeks;
+    // Monthly installment
+    const monthlyPayment =
+        total / months;
 
+    // Display results
     document.getElementById("result").innerHTML =
         `
         <h3>Loan Summary</h3>
 
+        Loan Category: ${category === "civil" ? "Civil Servant" : "Business/Personal"}<br>
+
         Loan Amount: ZMW ${amount.toFixed(2)}<br>
-        Duration: ${weeks} Week(s)<br>
-        Interest: ZMW ${interest.toFixed(2)}<br>
-        Service Charge (2%): ZMW ${serviceCharge.toFixed(2)}<br>
+
+        Duration: ${months} Month(s)<br>
+
+        Interest Rate: ${interestRate}% per month<br>
+
+        Interest Amount: ZMW ${interest.toFixed(2)}<br>
+
+        Processing Fee (5%): ZMW ${processingFee.toFixed(2)}<br>
+
         Total Repayment: ZMW ${total.toFixed(2)}<br>
-        Weekly Payment: ZMW ${weeklyPayment.toFixed(2)}
+
+        Monthly Payment: ZMW ${monthlyPayment.toFixed(2)}
         `;
 }
